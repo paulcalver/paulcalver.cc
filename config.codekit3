@@ -7,8 +7,24 @@
       "uuidString" : "E9187728-78A1-4C65-83C1-CE157B93FAD6"
     }
   ],
-  "creatorBuild" : "34564",
+  "creatorBuild" : "34892",
   "files" : {
+    "\/-\/local server setup.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/-\/local server setup.txt",
+      "oF" : 0
+    },
+    "\/-\/notes.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/-\/notes.txt",
+      "oF" : 0
+    },
     "\/.editorconfig" : {
       "cB" : 0,
       "ft" : 8192,
@@ -37,61 +53,53 @@
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
-      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/css\/_defaults.css",
       "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
+      "oS" : 1,
+      "pg" : 0
     },
     "\/assets\/css\/_global.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
-      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/css\/_global.css",
       "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
+      "oS" : 1,
+      "pg" : 0
     },
     "\/assets\/css\/_type.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
-      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/css\/_type.css",
       "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
+      "oS" : 1,
+      "pg" : 0
     },
     "\/assets\/css\/_variables.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
-      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/css\/_variables.css",
       "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
+      "oS" : 1,
+      "pg" : 0
     },
     "\/assets\/css\/app.css" : {
       "aP" : 1,
@@ -117,16 +125,14 @@
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
-      "dP" : 10,
       "ec" : 1,
       "ft" : 4,
       "ma" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/css\/app.css",
       "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
+      "oS" : 1,
+      "pg" : 0
     },
     "\/assets\/fonts\/founders-grotesk-condensed-semibold.woff2" : {
       "cB" : 0,
@@ -134,6 +140,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/fonts\/founders-grotesk-condensed-semibold.woff2",
+      "oF" : 0
+    },
+    "\/assets\/img\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/img\/favicon.ico",
       "oF" : 0
     },
     "\/assets\/img\/favicon.png" : {
@@ -148,6 +162,17 @@
       "ou" : "lpckwebp-none",
       "q" : 90,
       "rq" : 75
+    },
+    "\/assets\/js\/_app.min.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/_app.min.min.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 1
     },
     "\/assets\/js\/app.js" : {
       "bF" : 6,
@@ -186,6 +211,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/js\/helpers.min.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 1
+    },
+    "\/assets\/js\/modules\/_home.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/modules\/_home.min.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 1
@@ -245,25 +281,6 @@
       "oA" : 1,
       "oAP" : "\/media",
       "oF" : 0
-    },
-    "\/README.md" : {
-      "cB" : 0,
-      "cS" : 0,
-      "eF" : 1,
-      "eL" : 1,
-      "ema" : 1,
-      "eSQ" : 1,
-      "ft" : 4096,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/README.html",
-      "oF" : 0,
-      "oFM" : 0,
-      "oS" : 0,
-      "pHT" : 0,
-      "pME" : 1,
-      "rFN" : 0,
-      "uCM" : 0
     },
     "\/site\/accounts" : {
       "ft" : 65536,
@@ -333,6 +350,22 @@
       "oAP" : "\/site\/cache",
       "oF" : 0
     },
+    "\/site\/config\/.license" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/config\/.license",
+      "oF" : 0
+    },
+    "\/site\/config\/config.localhost.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/config\/config.localhost.php",
+      "oF" : 0
+    },
     "\/site\/config\/config.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -385,12 +418,161 @@
       "oAP" : "\/site\/snippets\/snippet-head.php",
       "oF" : 0
     },
+    "\/site\/templates\/_default.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/site\/templates\/_default.php",
+      "oF" : 0
+    },
     "\/site\/templates\/default.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/site\/templates\/default.php",
+      "oF" : 0
+    },
+    "\/title.png" : {
+      "ft" : 32768,
+      "iS" : 13961,
+      "oA" : 1,
+      "oAP" : "\/title.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/video\/i_go_to_the_sea_1080p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/i_go_to_the_sea_1080p.mp4",
+      "oF" : 0
+    },
+    "\/video\/leo_720p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/leo_720p.mp4",
+      "oF" : 0
+    },
+    "\/video\/leo_1080p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/leo_1080p.mp4",
+      "oF" : 0
+    },
+    "\/video\/maeva_720p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/maeva_720p.mp4",
+      "oF" : 0
+    },
+    "\/video\/maeva_1080p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/maeva_1080p.mp4",
+      "oF" : 0
+    },
+    "\/video\/martin_foru_1080p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/martin_foru_1080p.mp4",
+      "oF" : 0
+    },
+    "\/video\/Meghane_GIF_v2_3x4.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/Meghane_GIF_v2_3x4.mp4",
+      "oF" : 0
+    },
+    "\/video\/PAUL_CALVER_Kurt_Portrait_MOTION_WEB.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/PAUL_CALVER_Kurt_Portrait_MOTION_WEB.mp4",
+      "oF" : 0
+    },
+    "\/video\/PAUL_CALVER_Mia_Portrait_MOTION_WEB.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/PAUL_CALVER_Mia_Portrait_MOTION_WEB.mp4",
+      "oF" : 0
+    },
+    "\/video\/scotty-run-wide.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/scotty-run-wide.mp4",
+      "oF" : 0
+    },
+    "\/video\/scotty-run.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/scotty-run.mp4",
+      "oF" : 0
+    },
+    "\/video\/Soar_x_Altra_1080p_22CQ.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/Soar_x_Altra_1080p_22CQ.mp4",
+      "oF" : 0
+    },
+    "\/video\/soar_x_trail_720p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/soar_x_trail_720p.mp4",
+      "oF" : 0
+    },
+    "\/video\/soar_x_trail_1080p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/soar_x_trail_1080p.mp4",
+      "oF" : 0
+    },
+    "\/video\/the_young_lions_1080p.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/the_young_lions_1080p.mp4",
+      "oF" : 0
+    },
+    "\/video\/young_lions.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/video\/young_lions.mp4",
       "oF" : 0
     }
   },
@@ -402,9 +584,9 @@
   },
   "projectAttributes" : {
     "creationDate" : 755257803.139606,
-    "displayValue" : "kirby",
+    "displayValue" : "paulcalver.cc",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "\/media\/panel\/7c038681746a729e2fff9520a575e78c\/apple-touch-icon.png",
+    "iconImageName" : "meme-confession",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
@@ -703,8 +885,6 @@
     "buildFolderActive" : 0,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
-    "cssoForceMediaMerge" : 0,
-    "cssoRestructure" : 1,
     "environmentVariableEntries" : [
       "NODE_ENV:::production"
     ],
@@ -905,10 +1085,6 @@
         "active" : 0,
         "optionString" : "{'before': true, 'after': true, 'overrides': {}}"
       },
-      "line-comment-position" : {
-        "active" : 0,
-        "optionString" : "{'position': 'above'}"
-      },
       "linebreak-style" : {
         "active" : 0,
         "optionString" : "'unix'"
@@ -960,10 +1136,6 @@
       "max-statements-per-line" : {
         "active" : 0,
         "optionString" : "{'max': 1}"
-      },
-      "multiline-comment-style" : {
-        "active" : 0,
-        "optionString" : "'starred-block'"
       },
       "multiline-ternary" : {
         "active" : 0,
@@ -1106,7 +1278,8 @@
         "active" : 0
       },
       "no-extra-boolean-cast" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'enforceForInnerExpressions': false}"
       },
       "no-extra-label" : {
         "active" : 0
@@ -1191,7 +1364,8 @@
         "optionString" : "{'ignore': [], 'ignoreArrayIndexes': true, 'ignoreDefaultValues': false, 'ignoreClassFieldInitialValues': false, 'enforceConst': false, 'detectObjects': false}"
       },
       "no-misleading-character-class" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'allowEscape': false}"
       },
       "no-mixed-operators" : {
         "active" : 0,
@@ -1347,6 +1521,9 @@
         "active" : 0,
         "optionString" : "{'skipBlankLines': false, 'ignoreComments': false}"
       },
+      "no-unassigned-vars" : {
+        "active" : 0
+      },
       "no-undef" : {
         "active" : 1,
         "optionString" : "{'typeof': false}"
@@ -1427,7 +1604,8 @@
         "active" : 0
       },
       "no-useless-escape" : {
-        "active" : 1
+        "active" : 1,
+        "optionString" : "{'allowRegexCharacters': []}"
       },
       "no-useless-rename" : {
         "active" : 0,
@@ -1559,7 +1737,8 @@
         "active" : 0
       },
       "require-unicode-regexp" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'requireFlag': 'u'}"
       },
       "require-yield" : {
         "active" : 1
@@ -1850,11 +2029,9 @@
       "autoOutputPathReplace1" : "sass",
       "autoOutputPathReplace2" : "css",
       "autoOutputPathStyle" : 0,
-      "compilerType" : 0,
       "cssoStyle" : 0,
-      "decimalPrecision" : 10,
       "emitCharset" : 1,
-      "outputStyle" : 0,
+      "outputStyle" : 1,
       "purgeCSSStyle" : 0,
       "shouldRunAutoprefixer" : 0,
       "shouldRunBless" : 0,
@@ -1969,6 +2146,7 @@
     ],
     "rollupTreeshakingEnabled" : 1,
     "rollupTreeshakingModuleSideEffects" : 1,
+    "sassWarningStyle" : 1,
     "skippedFoldersString" : "\/media,_logs,\/site\/accounts,\/storage\/framework\/sessions,\/kirby,\/content,.idea,logs,log,node_modules,_cache,\/site\/plugins,\/site\/sessions,cache",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
@@ -1989,6 +2167,7 @@
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
+    "tsJSXFragmentFactory" : "Fragment",
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,

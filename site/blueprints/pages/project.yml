@@ -58,4 +58,4 @@ columns:
         layout: list
         size: small
         headline: Media Library
-        info: "{{ file.filename }}"
+        

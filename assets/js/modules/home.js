@@ -1,8 +1,13 @@
 export default class Home {
 	constructor() {
 		this.state = null; // Current app state
-		this.basePath = document.body.getAttribute("data-basepath") === "https://paulcalver.co" || document.body.getAttribute("data-basepath") === "https://paulcalver.cc" ? document.body.getAttribute("data-basepath") : new URL(document.body.getAttribute("data-basepath") || window.location.origin).pathname; // Extract the path portion of the base URL
+		//this.basePath = document.body.getAttribute("data-basepath") === "https://paulcalver.co" || document.body.getAttribute("data-basepath") === "https://paulcalver.cc" ? document.body.getAttribute("data-basepath") : new URL(document.body.getAttribute("data-basepath") || window.location.origin).pathname; // Extract the path portion of the base URL
 
+		const bp = document.body.dataset.basepath || window.location.origin;
+		// Use the full origin instead of .pathname so localhost isn’t just "/"
+		this.basePath = (
+  		bp === 'https://paulcalver.co' || bp === 'https://paulcalver.cc'
+		) ? bp : new URL(bp).origin;
 		// this.basePath = document.body.getAttribute("data-basepath"); // Extract the path portion of the base URL
 
 		this.supportsWebP = this.checkWebPSupport();
