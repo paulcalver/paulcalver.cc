@@ -8,6 +8,7 @@ Icon
 # ---------------
 
 /media/*
+/video/*
 !/media/index.html
 
 # Lock files
