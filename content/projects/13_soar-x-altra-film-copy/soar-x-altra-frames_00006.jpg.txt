@@ -1,0 +1,21 @@
+Highlight: false
+
+----
+
+Isdiptych: false
+
+----
+
+Poster: 
+
+----
+
+Videoisportrait: false
+
+----
+
+Autoplay: false
+
+----
+
+Uuid: zfCuWSFzHC7KdHw0

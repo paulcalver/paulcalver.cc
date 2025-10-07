@@ -1,0 +1,41 @@
+title: About
+
+status:
+  draft:
+    label: Draft
+    text: This page is in draft mode.
+  unlisted:
+    label: Published
+    text: This page is online and can be viewed publicly.
+
+options:
+  delete: false  # Prevent deletion
+  changeSlug: false  # Prevent changing the slug
+  changeStatus: false  # Prevent changing the status
+  changeTemplate: false  # Prevent changing the template
+
+columns:
+  - width: 3/3
+    fields:
+      introduction:
+        type: textarea
+        help: The introduction is shown at the top of the page.
+        size: small
+        buttons: 
+          - link
+
+      externalLinks:
+        label: External Links
+        type: structure
+        fields:
+          text:
+            label: Text
+            type: text
+            width: 1/2
+          link:
+            label: Link
+            type: url
+            width: 1/2
+          
+          
+

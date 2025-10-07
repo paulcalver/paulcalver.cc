@@ -1,0 +1,23 @@
+Title: Atacama
+
+----
+
+Media:
+
+- file://mxp6jz0QQFg0hwKe
+- file://1GCV9tNJ3D6E5LLV
+- file://281FcKhabtWA8IsJ
+- file://GYFdrIgifL4f8Cgg
+- file://Fn1qLysNX78ZosZj
+
+----
+
+Hidefromindex: false
+
+----
+
+Categories: Featured, Life, Work
+
+----
+
+Uuid: hEYatF13dBpgCfjp

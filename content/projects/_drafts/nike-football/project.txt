@@ -1,0 +1,24 @@
+Title: Nike Football
+
+----
+
+Media:
+
+- file://1tb9aRb8RDwj5nbM
+- file://LutUi46kO8b5x6DF
+- file://f1cXxYWXP1KOYmFC
+- file://lc0aAGNFvx1o6P0n
+- file://HOzu8cC0gOhn6OYh
+- file://IM4ECVlEEq5w2CGN
+
+----
+
+Hidefromindex: true
+
+----
+
+Categories: Commercial
+
+----
+
+Uuid: m5rXgPkt0AmOywgH

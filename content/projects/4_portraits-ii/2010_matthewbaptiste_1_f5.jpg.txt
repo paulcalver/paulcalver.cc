@@ -1,0 +1,33 @@
+Highlight: true
+
+----
+
+Isdiptych: false
+
+----
+
+Caption: 
+
+----
+
+Videourl: 
+
+----
+
+Poster: 
+
+----
+
+Videoisportrait: false
+
+----
+
+Autoplay: false
+
+----
+
+Uuid: x7NqGpnhHFcSaOMm
+
+----
+
+Focus: 21.2% 65.7%

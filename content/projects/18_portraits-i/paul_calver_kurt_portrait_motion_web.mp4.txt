@@ -1,0 +1,29 @@
+Highlight: false
+
+----
+
+Isdiptych: false
+
+----
+
+Caption: 
+
+----
+
+Videourl: https://paulcalver.cc/video/PAUL_CALVER_Kurt_Portrait_MOTION_WEB.mp4
+
+----
+
+Poster: - file://bZavXFfIJU0xuOsz
+
+----
+
+Videoisportrait: true
+
+----
+
+Autoplay: true
+
+----
+
+Uuid: sThtSaTybIwLHoCo

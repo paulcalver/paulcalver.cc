@@ -1,0 +1,33 @@
+Highlight: false
+
+----
+
+Isdiptych: true
+
+----
+
+Caption: 
+
+----
+
+Videourl: 
+
+----
+
+Poster: 
+
+----
+
+Videoisportrait: false
+
+----
+
+Autoplay: false
+
+----
+
+Uuid: YooS9BdzRZxZXfoR
+
+----
+
+Sort: 8

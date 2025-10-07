@@ -1,0 +1,30 @@
+Title: Paul Calver
+
+----
+
+Sitedescription: Paul Calver is a photographer and director with a unique and consistent style across multiple genres, exploring raw authenticity, dynamic energy and bold, graphic compositions.
+
+----
+
+Siteimage: - file://dHCXOtxZXJCPFttQ
+
+----
+
+Customembeds: <script defer data-domain="paulcalver.cc" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+----
+
+Projectcategories:
+
+- 
+  categoryname: Featured
+- 
+  categoryname: Sport
+- 
+  categoryname: Life
+- 
+  categoryname: Motion
+
+----
+
+Messages: 

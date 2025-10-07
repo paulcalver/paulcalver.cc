@@ -1,0 +1,21 @@
+Title: Nike x Chelsea
+
+----
+
+Media:
+
+- file://vls8aIIJUiC3MQ9C
+- file://cPi3IN00EMU0QYPF
+- file://NBWSj4XNtJwwlpmr
+
+----
+
+Hidefromindex: true
+
+----
+
+Categories: Commercial
+
+----
+
+Uuid: WXIPZ8nkgEU2eVLM

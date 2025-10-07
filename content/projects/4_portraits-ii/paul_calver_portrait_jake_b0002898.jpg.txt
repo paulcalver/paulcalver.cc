@@ -1,0 +1,25 @@
+Caption: 
+
+----
+
+Videourl: 
+
+----
+
+Highlight: false
+
+----
+
+Videoisportrait: false
+
+----
+
+Isdiptych: true
+
+----
+
+Poster: 
+
+----
+
+Uuid: 9Sn0VlcC6Z7TgRRF

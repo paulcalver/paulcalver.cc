@@ -1,0 +1,23 @@
+Title: Jerone
+
+----
+
+Media:
+
+- file://LycpnB6NO2apNOXt
+- file://adRrtIMlymmUH1Kw
+- file://zKcrPQ88jUCJAc9p
+- file://KxAAMNXagLEi4kOh
+- file://NgTmj0vmFgGUvLBn
+
+----
+
+Hidefromindex: false
+
+----
+
+Categories: Featured, Personal, Sport, Just Featured
+
+----
+
+Uuid: gRpVSedF6Esn8cPC

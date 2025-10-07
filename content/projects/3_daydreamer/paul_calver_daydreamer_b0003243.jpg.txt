@@ -1,0 +1,29 @@
+Highlight: true
+
+----
+
+Isdiptych: true
+
+----
+
+Caption: 
+
+----
+
+Videourl: 
+
+----
+
+Poster: 
+
+----
+
+Videoisportrait: false
+
+----
+
+Autoplay: false
+
+----
+
+Uuid: Ilrgh4nNCt9ZJtVj

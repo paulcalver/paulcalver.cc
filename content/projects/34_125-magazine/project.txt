@@ -1,0 +1,22 @@
+Title: 125 Magazine
+
+----
+
+Media:
+
+- file://NavgKWsByE5MBaQ1
+- file://xmElCwQP6mnqPg12
+- file://cc5veLKq2VGuZ0hd
+- file://279pnlCHMJQ3CotP
+
+----
+
+Hidefromindex: false
+
+----
+
+Categories: Featured, Life, Work
+
+----
+
+Uuid: h06uoAAjsPlDD15o

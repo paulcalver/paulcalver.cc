@@ -1,0 +1,40 @@
+Text: 
+
+----
+
+Uuid: VnAFBmqcrsKm5xzt
+
+----
+
+Media:
+
+- 
+  id: paul_calver_leo_acrobat_video_tn.mp4
+  image:
+    back: pattern
+    color: yellow-500
+    cover: false
+    icon: video
+  info: 'Highlight: false & pair with next: false'
+  link: >
+    /pages/projects+leo/files/paul_calver_leo_acrobat_video_tn.mp4
+  sortable: true
+  text: paul_calver_leo_acrobat_video_tn.mp4
+  uuid: file://s9gqEdL5GepOJ96O
+  dragText: '(video: paul_calver_leo_acrobat_video_tn.mp4)'
+  filename: paul_calver_leo_acrobat_video_tn.mp4
+  type: video
+  url: >
+    https://paulcalver.cc/media/pages/projects/leo/3621fc847e-1736780175/paul_calver_leo_acrobat_video_tn.mp4
+
+----
+
+Hidefromindex: 1
+
+----
+
+Categories:
+
+- Personal
+- Sport
+- Motion

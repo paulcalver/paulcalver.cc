@@ -1,0 +1,29 @@
+Highlight: false
+
+----
+
+Isdiptych: true
+
+----
+
+Caption: 
+
+----
+
+Videourl: https://paulcalver.co/video/scotty-run-wide.mp4
+
+----
+
+Poster: - file://nDICqdGcmLU1Lvby
+
+----
+
+Videoisportrait: true
+
+----
+
+Autoplay: true
+
+----
+
+Uuid: QkZAfLb8p9VLdCCj

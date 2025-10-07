@@ -1,0 +1,22 @@
+Title: Cowboy Bikes
+
+----
+
+Media:
+
+- file://rRlSq3NONKmVbQkm
+- file://XNUkOfsAXnS8yQFv
+- file://wbFBzljSTLS1FE31
+- file://WplodEPThsJ5SXzf
+
+----
+
+Hidefromindex: false
+
+----
+
+Categories: Life, Work
+
+----
+
+Uuid: nuJcDUJKGpgnDUJK

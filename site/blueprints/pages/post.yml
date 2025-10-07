@@ -1,0 +1,51 @@
+title: Post
+
+status:
+  draft:
+    label: Draft
+    text: This page is in draft mode.
+  unlisted:
+    label: Published
+    text: This page is online and can be viewed publicly.
+
+create:
+  status: unlisted
+
+options:
+  delete: true  # Prevent deletion
+  changeSlug: true  # Prevent changing the slug
+  changeStatus: true  # Prevent changing the status
+  changeTemplate: false  # Prevent changing the template
+
+
+
+columns:
+
+  - width: 2/3
+    fields:
+      media:
+        label: Media
+        type: files
+        help: Add images and super-compressed videos.
+        multiple: false
+        layout: cards
+        size: huge
+        accept: image/*, video/*
+        max: 1
+
+  - width: 1/3
+    sections:
+      date:
+        type: fields
+        fields:
+          date:
+            label: Date
+            type: date
+            time: false
+            default: today
+      mediaLibrary:
+        type: files
+        layout: list
+        size: small
+        headline: Media Library
+        info: "{{ file.filename }}"

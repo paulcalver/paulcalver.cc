@@ -1,0 +1,21 @@
+Highlight: false
+
+----
+
+Isdiptych: false
+
+----
+
+Poster: 
+
+----
+
+Videoisportrait: false
+
+----
+
+Autoplay: false
+
+----
+
+Uuid: bakMlq7JTwk0iNw8

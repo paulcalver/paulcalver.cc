@@ -1,0 +1,63 @@
+title: Image
+fields:
+  
+  highlight:
+    label: Highlight
+    type: toggle
+    width: 1/3
+    text: Highlight this media
+    help: >
+      Highlighted media is displayed on the Featured page.
+  
+  isDiptych:
+    label: Pair this media with the next one
+    type: toggle
+    default: false
+    width: 1/3
+    help: >
+      Select to make this image appear as a diptych with the following item.
+
+  caption:
+    label: Caption
+    type: text
+    width: 1/3
+    help: A caption, used for hidden pages only.
+    maxlength: 20
+    
+  lineBreak:
+    type: line
+    width: 3/3
+  info:
+    label: Info
+    type: info
+    text: >
+      The following fields must only be used when the thumbnail image is also a video.
+    width: 1/1
+  videoUrl:
+    label: Video URL
+    type: url
+    width: 1/4
+    help: Optional URL to a video related to this image.
+  poster:
+    label: Poster Image
+    type: files
+    width: 1/4
+    help: >
+      An image to display before the video is played.
+    layout: cards
+    size: medium
+    accept: image/*
+  videoIsPortrait:
+    label: Video Is Portrait
+    type: toggle
+    default: false
+    width: 1/4
+    help: >
+      Select if this video is portrait.
+  autoPlay:
+    label: Video Should Autoplay
+    type: toggle
+    default: false
+    width: 1/4
+    help: >
+      Select if this video should autoplay.

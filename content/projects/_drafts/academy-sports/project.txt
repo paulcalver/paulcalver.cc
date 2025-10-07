@@ -1,0 +1,26 @@
+Title: Academy Sports
+
+----
+
+Media:
+
+- file://gzERSRcDTxX4fy5q
+- file://ZGsQxrDaiZHqeQh3
+- file://DguR8K12NBZqmS2T
+- file://9FrIVXxOtOHAQ0Bn
+- file://cBBSxNNVwf5x79He
+- file://evMVzwix26SECtEf
+- file://oNzDXsue3XCCPAjk
+- file://DrygaKpwKBivpOXq
+
+----
+
+Hidefromindex: true
+
+----
+
+Categories: Sport, Commercial
+
+----
+
+Uuid: YI1wfIQIC0IEEMxq

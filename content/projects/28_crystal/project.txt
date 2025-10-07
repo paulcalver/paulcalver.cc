@@ -1,0 +1,21 @@
+Title: Crystal
+
+----
+
+Media:
+
+- file://3d6YqXFElKsigwvS
+- file://pQ3XxYRphQWPvfBq
+- file://l8nI13aKCo45QQZo
+
+----
+
+Hidefromindex: false
+
+----
+
+Categories: Featured, Life, Personal
+
+----
+
+Uuid: Da7kCAJZSRDOsYNf

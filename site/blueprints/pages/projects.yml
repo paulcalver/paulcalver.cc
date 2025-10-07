@@ -1,0 +1,54 @@
+title: Projects
+
+status:
+  draft:
+    label: Draft
+    text: This page is in draft mode.
+  unlisted:
+    label: Published
+    text: This page is online and can be viewed publicly.
+
+options:
+  delete: false  # Prevent deletion
+  changeSlug: false  # Prevent changing the slug
+  changeStatus: false  # Prevent changing the status
+  changeTemplate: false  # Prevent changing the template
+
+columns:
+  - width: 1/1
+    sections:
+      hiddenProjects:
+        type: pages
+        headline: Hidden Projects
+        parent: site.find("projects")
+        limit: 200
+        layout: cardlets
+        size: small
+        image:
+          query: page.media.toFiles.first
+        order:
+          by: date
+          dir: desc
+        info: "{{ page.client }}"
+        template: 
+          - project
+        query: site.find("projects").children.filterBy("hideFromIndex", true)
+
+  - width: 1/1
+    sections:
+      visibleProjects:
+        type: pages
+        headline: Visible Projects
+        parent: site.find("projects")
+        limit: 200
+        layout: cardlets
+        size: small
+        image:
+          query: page.media.toFiles.first
+        order:
+          by: date
+          dir: desc
+        info: "{{ page.client }}"
+        template: 
+          - project
+        query: site.find("projects").children.filterBy("hideFromIndex", false)

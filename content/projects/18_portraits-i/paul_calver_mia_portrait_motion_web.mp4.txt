@@ -1,0 +1,29 @@
+Highlight: false
+
+----
+
+Isdiptych: false
+
+----
+
+Caption: 
+
+----
+
+Videourl: https://paulcalver.cc/video/PAUL_CALVER_Mia_Portrait_MOTION_WEB.mp4
+
+----
+
+Poster: - file://PNgDZDlAp4SrkKcR
+
+----
+
+Videoisportrait: true
+
+----
+
+Autoplay: true
+
+----
+
+Uuid: RBmR753K9N2A1YDB

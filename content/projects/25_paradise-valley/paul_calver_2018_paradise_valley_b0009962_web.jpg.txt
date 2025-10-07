@@ -1,0 +1,29 @@
+Highlight: false
+
+----
+
+Isdiptych: true
+
+----
+
+Caption: 
+
+----
+
+Videourl: 
+
+----
+
+Poster: 
+
+----
+
+Videoisportrait: false
+
+----
+
+Autoplay: false
+
+----
+
+Uuid: T7Y50nlG6y25mR53

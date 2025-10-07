@@ -1,0 +1,13 @@
+Files changed:
+
+assests/js/modules/home.js
+Assists/js/app.min.js
+site/snippets/snippet-footer.php
+site/template/default.php (not changed yet actually)
+
+Had to edit php.ini (inside opt/homebrew/etc/php/8.4 folder)
+
+short_open_tag = On (normally Off) - This is a php tag error in the overall code, fine online, but not okay locally
+
+
+git remote add origin git@github.com:paulcalver/paulcalver.cc.git

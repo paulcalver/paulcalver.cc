@@ -1,0 +1,40 @@
+@font-face {
+	font-family: 'Founders Grotesk';
+	font-style: normal;
+	font-weight: bold;
+	src: url('../fonts/founders-grotesk-condensed-semibold.woff2') format('woff2');
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Monument Grotesk';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/ABCMonumentGrotesk-Medium-Trial.otf') format('opentype');
+	font-display: block;
+}
+
+
+@mixin bodyTypeSans() {
+	font-family:$fontSans;
+	font-size:$size1;
+	line-height:$line1;
+	text-transform:uppercase;
+	letter-spacing:0.02em;
+	@include mobile {
+		font-size:$size1Mobile;
+		line-height:$line1Mobile;
+	}
+}
+
+@mixin headerTypeSans() {
+	font-family:$fontSans;
+	font-size:$size2;
+	line-height:$line2;
+	text-transform:uppercase;
+	letter-spacing:0.01em;
+	@include mobile {
+		font-size:$size2Mobile;
+		line-height:$line2Mobile;
+	}
+}

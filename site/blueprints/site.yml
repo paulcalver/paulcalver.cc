@@ -1,0 +1,63 @@
+title: Site
+
+columns:
+  - width: 1/2
+    fields:
+      siteDescription:
+        label: Site Description
+        type: textarea
+        help: This is the text that will be displayed in search results.
+        size: small
+        buttons: false
+      siteImage:
+        label: Site Image
+        type: files
+        multiple: false
+        help: This image is displayed on social platforms.
+        multiple: false
+        accept: image/jpeg, image/png
+        layout: cardlets
+        image:
+          cover: true
+
+      customEmbeds:
+        label: Custom Embeds
+        type: textarea
+        size: tiny
+        buttons: false
+        help: If you want to add custom embeds, popups, stats etc, you can paste the code here and it will be added to the bottom of the body tag.
+
+      projectCategories:
+        label: Project Categories
+        type: structure
+        help: Add the project categories here before adding them to projects.
+        fields:
+          categoryName:
+            label: Name
+            type: text
+
+
+  - width: 1/2
+    sections:
+      pages:
+        type: pages
+        headline: Pages
+        layout: list
+        image: false
+        template: 
+          - page
+          - about
+          - projects
+
+      latestProjects:
+        type: pages
+        headline: Latest Projects
+        parent: site.find("projects")
+        layout: list
+        limit: 100
+        image: false
+        image:
+          query: page.media.toFiles.first
+        template: 
+          - project
+
