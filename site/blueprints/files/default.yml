@@ -9,6 +9,15 @@ fields:
     help: >
       Highlighted media is displayed on the Featured page.
   
+  hero:
+    label: Hero item
+    type: toggle
+    width: 1/3
+    text:
+      - "No"
+      - "Yes"
+    help: "Only one file across the whole site should be set as Hero."
+
   isDiptych:
     label: Pair this media with the next one
     type: toggle

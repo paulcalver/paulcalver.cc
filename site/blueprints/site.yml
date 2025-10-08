@@ -9,12 +9,12 @@ columns:
         help: This is the text that will be displayed in search results.
         size: small
         buttons: false
+
       siteImage:
         label: Site Image
         type: files
         multiple: false
         help: This image is displayed on social platforms.
-        multiple: false
         accept: image/jpeg, image/png
         layout: cardlets
         image:
@@ -25,7 +25,7 @@ columns:
         type: textarea
         size: tiny
         buttons: false
-        help: If you want to add custom embeds, popups, stats etc, you can paste the code here and it will be added to the bottom of the body tag.
+        help: If you want to add custom embeds, popups, stats etc, paste the code here and it will be added to the bottom of the body tag.
 
       projectCategories:
         label: Project Categories
@@ -36,6 +36,42 @@ columns:
             label: Name
             type: text
 
+      # --- Landing fields (direct children of "fields") ---
+      landing_enabled:
+        label: Enable landing
+        type: toggle
+        text:
+          - Off
+          - On
+        default: false
+
+      landing_media:
+        label: Landing image or video
+        type: files
+        multiple: false
+        uploads:
+          template: default
+        help: Select a single image or video
+      
+      landing_logo_color:
+        label: Logo colour
+        type: select
+        options:
+         white: White logo
+         black: Black logo
+        default: white
+        width: 1/2  
+
+      landing_link:
+        label: Landing click target
+        type: url
+        placeholder: /featured
+        help: Where to go when clicked. Leave empty to just reveal the page.
+
+      landing_show_once:
+        label: Show only once per session
+        type: toggle
+        default: true
 
   - width: 1/2
     sections:
@@ -44,10 +80,12 @@ columns:
         headline: Pages
         layout: list
         image: false
-        template: 
+        template:
           - page
           - about
           - projects
+          - landing
+          - default
 
       latestProjects:
         type: pages
@@ -58,6 +96,5 @@ columns:
         image: false
         image:
           query: page.media.toFiles.first
-        template: 
+        template:
           - project
-

@@ -2,6 +2,10 @@ Highlight: true
 
 ----
 
+Hero: true
+
+----
+
 Isdiptych: false
 
 ----

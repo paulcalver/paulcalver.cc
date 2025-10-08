@@ -27,4 +27,28 @@ Projectcategories:
 
 ----
 
+Landing-enabled: true
+
+----
+
+Landing-media: - file://gzuil2oxaxyjxoxd
+
+----
+
+Landing-logo-color: white
+
+----
+
+Landing-link: 
+
+----
+
+Landing-show-once: false
+
+----
+
+Landing: true
+
+----
+
 Messages: 

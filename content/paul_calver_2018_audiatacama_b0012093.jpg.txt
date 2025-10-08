@@ -1,0 +1,33 @@
+Highlight: false
+
+----
+
+Hero: false
+
+----
+
+Isdiptych: false
+
+----
+
+Caption: 
+
+----
+
+Videourl: 
+
+----
+
+Poster: 
+
+----
+
+Videoisportrait: false
+
+----
+
+Autoplay: false
+
+----
+
+Uuid: 3motvkssizugbmeu

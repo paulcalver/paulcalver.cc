@@ -163,17 +163,6 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/assets\/js\/_app.min.js" : {
-      "bF" : 6,
-      "ft" : 64,
-      "ma" : 1,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/js\/_app.min.min.js",
-      "oF" : 0,
-      "sC" : 0,
-      "tS" : 1
-    },
     "\/assets\/js\/app.js" : {
       "bF" : 6,
       "ft" : 64,
@@ -211,6 +200,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/js\/helpers.min.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 1
+    },
+    "\/assets\/js\/modules\/__home.js" : {
+      "bF" : 6,
+      "ft" : 64,
+      "ma" : 1,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/modules\/__home.min.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 1
@@ -402,6 +402,14 @@
       "oAP" : "\/site\/snippets\/index.html",
       "oF" : 0
     },
+    "\/site\/snippets\/landing.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/site\/snippets\/landing.php",
+      "oF" : 0
+    },
     "\/site\/snippets\/snippet-footer.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -433,6 +441,19 @@
       "oA" : 0,
       "oAP" : "\/site\/templates\/default.php",
       "oF" : 0
+    },
+    "\/title_white.png" : {
+      "ft" : 32768,
+      "iS" : 18739,
+      "oA" : 1,
+      "oAP" : "\/title_white.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
     },
     "\/title.png" : {
       "ft" : 32768,

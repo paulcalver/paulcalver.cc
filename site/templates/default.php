@@ -1,5 +1,29 @@
 <?php snippet('snippet-head'); ?>
 
+<?php
+$landingEnabled = $site->landing_enabled()->toBool();
+$showOnce       = $site->landing_show_once()->toBool();
+$landingLink    = $site->landing_link()->or('/featured');
+
+$mediaField = $site->landing_media();
+$media = $mediaField && $mediaField->isNotEmpty()
+  ? ($mediaField->toFiles()->first() ?? $mediaField->toFile())
+  : null;
+
+// Detect mobile (simple user agent check)
+$isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER_AGENT']);
+?>
+
+<?php if ($landingEnabled && $media && !$isMobile): ?>
+  <?php snippet('landing', [
+    'media'       => $media,
+    'landingLink' => $landingLink,
+    'showOnce'    => $showOnce
+  ]) ?>
+<?php else: ?>
+  <!-- landing not shown: enabled=<?= $landingEnabled ? '1' : '0' ?>, media=<?= $media ? 'ok' : 'none' ?> -->
+<?php endif; ?>
+
 <main id="app">
 
   <section class="about">
@@ -150,6 +174,54 @@
 
   // Fetch all published projects
   $projects = page('projects')->children()->listed()->filterBy('hideFromIndex', '!=', true);
+
+  // ---------------------------
+  // HERO LOGIC (new)
+  // ---------------------------
+
+  // Find the first file across the site marked as hero: true
+  $heroFile = site()->index()->files()->filterBy('hero', true)->first();
+  $heroItem = null;
+
+  // Build highlighted media array, but pull the hero out separately
+  $allHighlightedMedia = [];
+
+  foreach ($projects as $project) {
+    $categories = $project->categories()->isEmpty() ? [] : $project->categories()->split(',');
+    $categorySlugs = array_map(function ($category) {
+      return Str::slug($category);
+    }, $categories);
+
+    $mediaItems = $project->media()->toFiles();
+    if ($mediaItems->isNotEmpty()) {
+      $highlightedMedia = $mediaItems->filter(function ($file) {
+        return $file->highlight()->toBool();
+      });
+
+      foreach ($highlightedMedia as $media) {
+        // If this file is the chosen hero, keep it aside and don't add to pool
+        if ($heroFile && $media->is($heroFile)) {
+          $heroItem = [
+            'media'      => $media,
+            'title'      => $project->title()->escape('attr'),
+            'client'     => $project->client()->escape('attr'),
+            'categories' => $categorySlugs
+          ];
+          continue;
+        }
+
+        $allHighlightedMedia[] = [
+          'media'      => $media,
+          'title'      => $project->title()->escape('attr'),
+          'client'     => $project->client()->escape('attr'),
+          'categories' => $categorySlugs
+        ];
+      }
+    }
+  }
+
+  // Shuffle the non-hero highlighted media
+  shuffle($allHighlightedMedia);
   ?>
 
   <section class="featured">
@@ -157,45 +229,22 @@
       <div class="featured-items">
 
         <?php
-        $allHighlightedMedia = [];
-
-        foreach ($projects as $project) {
-          // Ensure categories are correctly parsed
-          $categories = $project->categories()->isEmpty() ? [] : $project->categories()->split(',');
-
-          // Convert categories to slugs
-          $categorySlugs = array_map(function ($category) {
-            return Str::slug($category);
-          }, $categories);
-
-          // Check for 'featured' in slugs (case-insensitive)
-          if (in_array('featured', $categorySlugs, true)) {
-            // Fetch all media files
-            $mediaItems = $project->media()->toFiles();
-
-            if ($mediaItems->isNotEmpty()) {
-              // Filter images with the toggle 'highlight' set to true
-              $highlightedMedia = $mediaItems->filter(function ($file) {
-                return $file->highlight()->toBool();
-              });
-
-              // Add to the combined array
-              foreach ($highlightedMedia as $media) {
-                $allHighlightedMedia[] = [
-                  'media' => $media,
-                  'title' => $project->title()->escape('attr'),
-                  'client' => $project->client()->escape('attr'),
-                  'categories' => $categorySlugs
-                ];
-              }
-            }
-          }
+        // Render HERO first (bigger resize; add .hero-figure class)
+        if ($heroItem) {
+          ob_start();
+          renderMediaItem(
+            $heroItem['media'],
+            $heroItem['title'],
+            $heroItem['client'],
+            $heroItem['categories'],
+            1200 // larger than the regular 900 to give it more presence
+          );
+          $heroHtml = ob_get_clean();
+          // Inject a special class hook for JS/CSS positioning
+          echo str_replace('class="unfiltered-figure', 'class="unfiltered-figure hero-figure', $heroHtml);
         }
 
-        // Shuffle all highlighted media
-        shuffle($allHighlightedMedia);
-
-        // Render each highlighted media item
+        // Render the remaining highlighted media as before
         foreach ($allHighlightedMedia as $item) {
           renderMediaItem(
             $item['media'],
@@ -261,7 +310,7 @@
   <section class="gallery">
     <div class="gallery-inner">
       <?php
-      // Gallery block intentionally left commented in your original
+      // (left intentionally commented in your original)
       ?>
     </div>
   </section>
@@ -294,12 +343,9 @@
           </a>
 
           <?php foreach ($projectCategories as $category):
-            // Skip the 'Featured' category
             if (strtolower($category->categoryName()->value()) === 'featured') {
               continue;
             }
-
-            // Create a slug for the category name
             $slug = $category->categoryName()->slug();
             $url = url("filter/{$slug}");
             ?>
@@ -338,10 +384,7 @@
 
     <div class="project-index">
       <?php
-      // if ($page->parent() && $page->parent()->is(page('projects')) && $page->hideFromIndex()->isTrue()) {
-      //   $totalSlides = str_pad($totalSlides, 2, '0', STR_PAD_LEFT);
-      //   echo '01 | ' . $totalSlides;
-      // }
+      // (kept from your original)
       ?>
     </div>
   </nav>

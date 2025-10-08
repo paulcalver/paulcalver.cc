@@ -1,136 +1,3 @@
-// ===============================
-// Landing Overlay (Option A)
-// ===============================
-const Landing = (() => {
-  if (window.__pcLandingBooted) return { init(){} };
-  window.__pcLandingBooted = true;
-
-  const KEY = 'pcLandingSeen';
-
-  function markSeen() {
-    try { sessionStorage.setItem(KEY, '1'); } catch {}
-    document.documentElement.classList.add('landing-dismissed');
-  }
-
-  function markSeen() {
-  try { sessionStorage.setItem('pcLandingSeen', '1'); } catch {}
-  document.documentElement.classList.add('landing-dismissed');
-}
-
-// UPDATED finish: fade overlay, then reveal + nudge featured in
-function finish(el) {
-  // mark seen + fade overlay out
-  try { sessionStorage.setItem('pcLandingSeen', '1'); } catch {}
-  document.documentElement.classList.add('landing-dismissed');
-
-  el.classList.add('is-hidden');
-
-  const OUT_MS = parseFloat(getComputedStyle(el).getPropertyValue('--landing-fade-out')) || 500;
-
-  setTimeout(() => {
-    if (el && el.parentNode) el.parentNode.removeChild(el);
-
-    // Reveal the app
-    document.body.classList.remove('has-landing');
-
-    // Gentle container nudge only — leave figures alone
-    const container = document.querySelector('.featured-items');
-    if (container && window.gsap) {
-      gsap.fromTo(
-        container,
-        { scale: 0.97 },                   // start almost at 1
-        { scale: 1, duration: 1.1, ease: 'power2.out', overwrite: 'auto' }
-      );
-    }
-  }, OUT_MS);
-}
-
-function init() {
-  const el = document.getElementById('landing-overlay');
-
-  // If there's no overlay element, ensure the app is visible
-  if (!el) {
-    document.body.classList.remove('has-landing');
-    return;
-  }
-
-  // If the overlay is present but CSS-hidden (e.g. someone re-added a media query)
-  const cs = window.getComputedStyle(el);
-  if (cs.display === 'none' || cs.visibility === 'hidden') {
-    document.body.classList.remove('has-landing');
-    return;
-  }
-
-  // Normal path
-  document.body.classList.add('has-landing');
-
-  const showOnce = el.dataset.showOnce === '1';
-  try {
-    if (showOnce && sessionStorage.getItem('pcLandingSeen') === '1') {
-      document.documentElement.classList.add('landing-dismissed');
-      el.remove();
-      document.body.classList.remove('has-landing');
-      return;
-    }
-  } catch {}
-
-  // Fade-in enter state
-  requestAnimationFrame(() => el.classList.add('is-entered'));
-
-  // Fade overlay in
-  requestAnimationFrame(() => {
-  el.classList.add('is-entered');
-
-  // Lazy-attach video src when overlay becomes visible
-  const vid = document.getElementById('landing-video');
-  if (vid) {
-    const srcEl = vid.querySelector('source[data-src]');
-    if (srcEl && !srcEl.src) {
-      srcEl.src = srcEl.dataset.src;
-      vid.load();
-      vid.addEventListener('canplay', () => {
-        try { vid.play(); } catch {}
-      }, { once: true });
-    }
-   }
-  });
-
-
-  // Click anywhere to finish
-  el.addEventListener('click', () => finish(el));
-
-  // Keyboard
-  el.tabIndex = 0;
-  el.setAttribute('role', 'button');
-  el.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape') finish(el);
-  });
-
-  // Optional timeout
-  const timeout = parseInt(el.dataset.timeout || '0', 10);
-  if (timeout > 0) setTimeout(() => finish(el), timeout);
-
-  // Safety: if someone resizes to a breakpoint that hides the overlay, un-dim the app
-  window.addEventListener('resize', () => {
-    const elNow = document.getElementById('landing-overlay');
-    if (!elNow) { document.body.classList.remove('has-landing'); return; }
-    const csNow = getComputedStyle(elNow);
-    if (csNow.display === 'none' || csNow.visibility === 'hidden') {
-      document.body.classList.remove('has-landing');
-    }
-  }, { passive: true });
-}
-
-  return { init };
-})();
-
-// Initialise AFTER DOM is ready (place once at end of home.js, outside the class)
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => Landing.init());
-} else {
-  Landing.init();
-}
-
 export default class Home {
 	constructor() {
 		this.state = null; // Current app state
@@ -201,9 +68,6 @@ export default class Home {
 
 		this.initializeRouter();
 		this.handleStateChange();
-
-		// Initialise Landing overlay
-		// Landing.init();
 	}
 
 	isMobile() {
@@ -1729,10 +1593,4 @@ navigate(url, state = {}) {
 		}
 	}
 
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => Landing.init());
-} else {
-  Landing.init();
 }
