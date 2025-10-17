@@ -64,6 +64,26 @@ button {
   pointer-events: none;
 }
 
+/* Variant colour tokens */
+.landing-variant-black { --brand-fg: #000; }
+.landing-variant-white { --brand-fg: #fff; }
+
+/* Byline styling */
+.landing-byline {
+  font-family: "Founders Grotesk", sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-top: 0.35em;
+  color: var(--brand-fg);
+  max-width: 120%;            /* make it a bit wider than the title area */
+  white-space: nowrap;        /* keep it on one line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;         /* centre it under the logo/title */
+  display: block;
+  transform: translateX(-10%); /* gently offset to visually centre the extended width */
+}
+
 /* Before: .has-landing #app { opacity: 0; } */
 html:not(.landing-dismissed) body.has-landing #app { opacity: 0; }
 
@@ -91,7 +111,7 @@ html:not(.landing-dismissed) body.has-landing #app { opacity: 0; }
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
+  width: 400px;
   max-width: 70vw;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -143,6 +163,7 @@ html:not(.landing-dismissed) body.has-landing #app { opacity: 0; }
 
 	.about-inner {
 		width:500px;
+
 		text-align:center;
 		text-wrap:balance !important;
 		// font-family:Georgia, 'Times New Roman', Times, serif !important;
@@ -312,9 +333,9 @@ html:not(.landing-dismissed) body.has-landing #app { opacity: 0; }
 
 			figure.hide {display:none;}
 
-			.featured figure {
+			// .featured figure {
 				
-			}
+			// }
 
 			figure.not-selected {
 				opacity:0.3;
@@ -411,9 +432,9 @@ html:not(.landing-dismissed) body.has-landing #app { opacity: 0; }
 
 }
 
-	.gallery-inner {
+	// .gallery-inner {
 
-	}
+	// }
 
 		.gallery-slide {
 			position:absolute;
@@ -489,9 +510,9 @@ html:not(.landing-dismissed) body.has-landing #app { opacity: 0; }
 
 			
 
-			.gallery-slide figure.loaded {
-				// transform:scale(1);
-			}
+			// .gallery-slide figure.loaded {
+			// 	// transform:scale(1);
+			// }
 
 			html:not(.is-safari) .gallery-slide img,
 			html:not(.is-safari) .gallery-slide video {
@@ -872,9 +893,9 @@ nav {
 		}
 	}
 
-	.about-active .external-links {
+	// .about-active .external-links {
 		
-	}
+	// }
 
 		.filter-button,
 		.external-link {
@@ -1023,9 +1044,9 @@ nav {
 		pointer-events:auto;
 	}
 
-	.index-active .filters {
+	// .index-active .filters {
 		
-	}
+	// }
 
 		.filters {
 			@include mobile {
