@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'debug' => true,
+  'debug' => false,
 
   // The local base URL Kirby should use when generating links & data attributes
   'url' => 'http://localhost:8000',

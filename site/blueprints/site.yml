@@ -60,7 +60,13 @@ columns:
          white: White logo
          black: Black logo
         default: white
-        width: 1/2  
+        width: 1/2 
+
+      landing_byline:
+        label: Intro byline
+        type: text
+        width: 1/2
+        placeholder: e.g. Photographer & Director | People, Sport, Culture   
 
       landing_link:
         label: Landing click target

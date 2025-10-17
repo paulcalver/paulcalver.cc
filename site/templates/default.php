@@ -175,18 +175,21 @@ $isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER
   // Fetch all published projects
   $projects = page('projects')->children()->listed()->filterBy('hideFromIndex', '!=', true);
 
-  // ---------------------------
-  // HERO LOGIC (new)
-  // ---------------------------
-
-  // Find the first file across the site marked as hero: true
-  $heroFile = site()->index()->files()->filterBy('hero', true)->first();
-  $heroItem = null;
-
-  // Build highlighted media array, but pull the hero out separately
+  // Build highlighted media array from featured projects only
   $allHighlightedMedia = [];
 
-  foreach ($projects as $project) {
+  // Filter projects to only include those with the "Featured" category
+  $featuredProjects = $projects->filter(function ($project) {
+    $categories = $project->categories()->isEmpty() ? [] : $project->categories()->split(',');
+    foreach ($categories as $category) {
+      if (strtolower(trim($category)) === 'featured') {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  foreach ($featuredProjects as $project) {
     $categories = $project->categories()->isEmpty() ? [] : $project->categories()->split(',');
     $categorySlugs = array_map(function ($category) {
       return Str::slug($category);
@@ -199,17 +202,6 @@ $isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER
       });
 
       foreach ($highlightedMedia as $media) {
-        // If this file is the chosen hero, keep it aside and don't add to pool
-        if ($heroFile && $media->is($heroFile)) {
-          $heroItem = [
-            'media'      => $media,
-            'title'      => $project->title()->escape('attr'),
-            'client'     => $project->client()->escape('attr'),
-            'categories' => $categorySlugs
-          ];
-          continue;
-        }
-
         $allHighlightedMedia[] = [
           'media'      => $media,
           'title'      => $project->title()->escape('attr'),
@@ -220,7 +212,7 @@ $isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER
     }
   }
 
-  // Shuffle the non-hero highlighted media
+  // Shuffle the highlighted media
   shuffle($allHighlightedMedia);
   ?>
 
@@ -229,22 +221,7 @@ $isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER
       <div class="featured-items">
 
         <?php
-        // Render HERO first (bigger resize; add .hero-figure class)
-        if ($heroItem) {
-          ob_start();
-          renderMediaItem(
-            $heroItem['media'],
-            $heroItem['title'],
-            $heroItem['client'],
-            $heroItem['categories'],
-            1200 // larger than the regular 900 to give it more presence
-          );
-          $heroHtml = ob_get_clean();
-          // Inject a special class hook for JS/CSS positioning
-          echo str_replace('class="unfiltered-figure', 'class="unfiltered-figure hero-figure', $heroHtml);
-        }
-
-        // Render the remaining highlighted media as before
+        // Render all highlighted media from featured projects
         foreach ($allHighlightedMedia as $item) {
           renderMediaItem(
             $item['media'],
