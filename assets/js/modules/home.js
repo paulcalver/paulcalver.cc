@@ -925,7 +925,7 @@ navigate(url, state = {}) {
 			link.style.width = `${itemWidth}px`;
 			link.style.height = `${itemHeight}px`;
 	
-			const minPadding = 40;
+			const minPadding = 50;
 			const maxPadding = 80;
 	
 			figure.style.padding = `${Math.floor(Math.random() * (maxPadding - minPadding + 1) + minPadding)}px`;
@@ -947,13 +947,32 @@ navigate(url, state = {}) {
 		const featuredContainer = document.querySelector('.featured-items');
 		// featuredContainer.style.width = `${adjustedContainerWidth}px`;
 	
-		// Initialize Packery layout
+		// Shuffle the items array to randomize their order
+		const itemsArray = Array.from(items);
+		const figures = itemsArray.map(item => item.closest('figure'));
+		
+		// Fisher-Yates shuffle
+		for (let i = figures.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			featuredContainer.insertBefore(figures[j], figures[i].nextSibling);
+		}
+	
+		// Initialize Packery layout with horizontal order
 		var iso = new Packery('.featured-items', {
 			itemSelector: 'figure',
-			resize: false
+			resize: false,
+			horizontalOrder: false // Allow more natural filling
 		});
 
 		featuredContainer.style.width = document.querySelector('.featured-items').offsetWidth + 'px';
+		
+		// Add some random vertical offset to avoid strict top alignment
+		const figureElements = featuredContainer.querySelectorAll('figure');
+		figureElements.forEach((figure, index) => {
+			// Add a slight random vertical offset (0-60px) to break the rigid top alignment
+			const verticalOffset = Math.floor(Math.random() * 90);
+			figure.style.transform = `translateY(${verticalOffset}px)`;
+		});
 
 		
 	}
