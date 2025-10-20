@@ -27,7 +27,7 @@ Projectcategories:
 
 ----
 
-Landing-enabled: false
+Landing-enabled: true
 
 ----
 
@@ -35,7 +35,11 @@ Landing-show-once: false
 
 ----
 
-Landing-media: - file://wdg7eipqjqwxg729
+Landing-media: - file://ylomf25wlpe6x14r
+
+----
+
+Landing-poster: - file://6nj9ifairjjobwlh
 
 ----
 

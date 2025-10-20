@@ -58,6 +58,16 @@ columns:
         help: Select a single image or video
         width: 1/2
       
+      landing_poster:
+        label: Landing video poster (optional)
+        type: files
+        multiple: false
+        accept: image/jpeg, image/png, image/webp
+        uploads:
+          template: default
+        help: Custom poster image for the landing video. If not set, will auto-generate from video.
+        width: 1/2
+      
       landing_logo_color:
         label: Logo colour
         type: select
