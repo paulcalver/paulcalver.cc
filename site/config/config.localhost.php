@@ -14,6 +14,8 @@ return [
 
   // Optional: keep thumbs in jpg locally to avoid WebP issues
   //'thumbs' => ['format' => 'jpg'],
+
+  // Hero image handling: ensure only one file per site can have 'hero' set to true
   'hooks' => [
     'file.update:after' => function ($newFile, $oldFile) {
       if ($newFile->hero()->toBool()) {

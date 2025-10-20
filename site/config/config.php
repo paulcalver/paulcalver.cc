@@ -4,6 +4,8 @@ return [
     'debug' => false,
 
    
+
+  // Hero image handling: ensure only one file per site can have 'hero' set to true
   'hooks' => [
     'file.update:after' => function ($newFile, $oldFile) {
       if ($newFile->hero()->toBool()) {

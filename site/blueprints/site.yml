@@ -40,10 +40,14 @@ columns:
       landing_enabled:
         label: Enable landing
         type: toggle
-        text:
-          - Off
-          - On
         default: false
+        width: 1/2 
+
+      landing_show_once:
+        label: Show only once per session
+        type: toggle
+        default: true
+        width: 1/2 
 
       landing_media:
         label: Landing image or video
@@ -52,21 +56,23 @@ columns:
         uploads:
           template: default
         help: Select a single image or video
+        width: 1/2
       
       landing_logo_color:
         label: Logo colour
         type: select
         options:
-         white: White logo
-         black: Black logo
+         white: White
+         black: Black
         default: white
         width: 1/2 
 
-      landing_byline:
-        label: Intro byline
-        type: text
-        width: 1/2
-        placeholder: e.g. Photographer & Director | People, Sport, Culture   
+
+      # landing_byline:
+      #   label: Intro byline
+      #   type: text
+      #   # width: 1/2
+      #   placeholder: e.g. Photographer & Director | People, Sport, Culture   
 
       landing_link:
         label: Landing click target
@@ -74,10 +80,6 @@ columns:
         placeholder: /featured
         help: Where to go when clicked. Leave empty to just reveal the page.
 
-      landing_show_once:
-        label: Show only once per session
-        type: toggle
-        default: true
 
   - width: 1/2
     sections:
@@ -90,8 +92,6 @@ columns:
           - page
           - about
           - projects
-          - landing
-          - default
 
       latestProjects:
         type: pages

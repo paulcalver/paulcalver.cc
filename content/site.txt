@@ -27,11 +27,15 @@ Projectcategories:
 
 ----
 
-Landing-enabled: true
+Landing-enabled: false
 
 ----
 
-Landing-media: - file://gzuil2oxaxyjxoxd
+Landing-show-once: false
+
+----
+
+Landing-media: - file://wdg7eipqjqwxg729
 
 ----
 
@@ -39,15 +43,11 @@ Landing-logo-color: white
 
 ----
 
-Landing-byline: 
-
-----
-
 Landing-link: 
 
 ----
 
-Landing-show-once: false
+Landing-byline: 
 
 ----
 
