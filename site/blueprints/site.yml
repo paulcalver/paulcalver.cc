@@ -20,12 +20,6 @@ columns:
         image:
           cover: true
 
-      customEmbeds:
-        label: Custom Embeds
-        type: textarea
-        size: tiny
-        buttons: false
-        help: If you want to add custom embeds, popups, stats etc, paste the code here and it will be added to the bottom of the body tag.
 
       projectCategories:
         label: Project Categories
@@ -58,6 +52,15 @@ columns:
         help: Select a single image or video
         width: 1/2
       
+      landing_logo_color:
+        label: Logo colour
+        type: select
+        options:
+         white: White
+         black: Black
+        default: white
+        width: 1/2 
+        
       landing_poster:
         label: Landing video poster (optional)
         type: files
@@ -68,15 +71,6 @@ columns:
         help: Custom poster image for the landing video. If not set, will auto-generate from video.
         width: 1/2
       
-      landing_logo_color:
-        label: Logo colour
-        type: select
-        options:
-         white: White
-         black: Black
-        default: white
-        width: 1/2 
-
 
       # landing_byline:
       #   label: Intro byline
@@ -84,12 +78,18 @@ columns:
       #   # width: 1/2
       #   placeholder: e.g. Photographer & Director | People, Sport, Culture   
 
-      landing_link:
-        label: Landing click target
-        type: url
-        placeholder: /featured
-        help: Where to go when clicked. Leave empty to just reveal the page.
+      # landing_link:
+      #   label: Landing click target
+      #   type: url
+      #   placeholder: /featured
+      #   help: Where to go when clicked. Leave empty to just reveal the page.
 
+      customEmbeds:
+        label: Custom Embeds
+        type: textarea
+        size: tiny
+        buttons: false
+        help: If you want to add custom embeds, popups, stats etc, paste the code here and it will be added to the bottom of the body tag.
 
   - width: 1/2
     sections:

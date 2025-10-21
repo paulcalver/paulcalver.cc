@@ -12,16 +12,19 @@ $media = $mediaField && $mediaField->isNotEmpty()
 
 // Detect mobile (simple user agent check)
 $isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER_AGENT']);
+
+// Only show landing on root URL (home page)
+$isRootUrl = $page->isHomePage() || $page->uri() === '' || $page->url() === $site->url();
 ?>
 
-<?php if ($landingEnabled && $media && !$isMobile): ?>
+<?php if ($landingEnabled && $media && !$isMobile && $isRootUrl): ?>
   <?php snippet('landing', [
     'media'       => $media,
     'landingLink' => $landingLink,
     'showOnce'    => $showOnce
   ]) ?>
 <?php else: ?>
-  <!-- landing not shown: enabled=<?= $landingEnabled ? '1' : '0' ?>, media=<?= $media ? 'ok' : 'none' ?> -->
+  <!-- landing not shown: enabled=<?= $landingEnabled ? '1' : '0' ?>, media=<?= $media ? 'ok' : 'none' ?>, isRoot=<?= $isRootUrl ? '1' : '0' ?> -->
 <?php endif; ?>
 
 <main id="app">
