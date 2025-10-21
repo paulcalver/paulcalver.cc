@@ -15,7 +15,18 @@ $isMobile = preg_match('/Mobile|Android|iPhone|iPad|iPod/i', $_SERVER['HTTP_USER
 
 // Only show landing on root URL (home page)
 $isRootUrl = $page->isHomePage() || $page->uri() === '' || $page->url() === $site->url();
+
+// If not on root URL and showOnce is enabled, mark landing as seen (bypass logic)
+$shouldMarkSeen = !$isRootUrl && $showOnce;
 ?>
+
+<?php if ($shouldMarkSeen): ?>
+<script>
+// Mark landing as seen since user entered on a non-root page
+try { sessionStorage.setItem('pcLandingSeen', '1'); } catch {}
+document.documentElement.classList.add('landing-dismissed');
+</script>
+<?php endif; ?>
 
 <?php if ($landingEnabled && $media && !$isMobile && $isRootUrl): ?>
   <?php snippet('landing', [
